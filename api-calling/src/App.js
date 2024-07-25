@@ -19,11 +19,16 @@ useEffect(()=>{
 useEffect(()=>{
   getRandomUser().then((user)=> setUser(user.results[0]));
 },[])
+
+const refresh = ()=>{
+  getRandomUser().then((user)=> setUser(user.results[0]));
+}
+
 console.log(user)
   return (
     <div className="App">
      {user && <UserCard data={user}/>}
-      
+      <button onClick={refresh}>Refresh User</button>
      {
       data ? data.map((e)=> <PostCard title={e.title} body={e.body}/>): <p>no Data</p>
      }
