@@ -27,7 +27,8 @@ function App() {
 
 
 {/* data ko props ke send kar ne ka second tarika step second  */}
-
+{/* single data ke liye data.map() function use nhi hota hai - agar api me single user ka data hi hai to data.map function use nhi hota hai  */}
+{/* {data ? data.map((e)=> <Randomuser gender={e.gender} />):(<p>no data forund</p>)}  */}
     </div>
   );
 }
