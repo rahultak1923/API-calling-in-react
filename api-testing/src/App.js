@@ -13,19 +13,20 @@ function App() {
 
   return (
     <div>
-      {/* one step the ki data yahi html se show karana hai to  */}
+{/* one step the ki data yahi html se show karana hai to  */}
       {data ? (
         <h2>{data.gender}</h2>
       ) : (<p>no data </p>)}
 
-
-
-
+{/* data ko props ke send kar ne ka ak tarika step one  */}
       {data ? (
         <Randomuser gender={data.gender} />
       ) : (
         <p>Loading...</p>
       )}
+
+
+{/* data ko props ke send kar ne ka second tarika step second  */}
 
     </div>
   );
