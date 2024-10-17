@@ -1,23 +1,25 @@
-import logo from './logo.svg';
 import './App.css';
+import Card from './components/Card';
+import Navbar from './components/Navbar';
+import Input from './components/Input';
+import Button from './components/Button';
+import { useWeather } from './context/Weather';
+
 
 function App() {
+  const weather = useWeather();
+  console.log(weather)
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+   
+   <Navbar/>
+   <div className="d-flex" style={{paddingRight:"100px", paddingLeft:"100px", marginTop:"1rem"}}>
+
+   <Input/>
+   <Button onClick={weather.fetchData} value="Search" color="success"/>
+   </div>
+   <Card/>
+   <Button value="Refresh" color="danger"/>
     </div>
   );
 }
