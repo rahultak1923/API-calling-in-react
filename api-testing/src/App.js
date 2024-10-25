@@ -1,15 +1,23 @@
 import { useEffect, useState } from 'react';
 import './App.css';
-import { getPosts } from './api';
+import { getPosts,getData } from './api';
 import Randomuser from './components/Randomuser';
+// second user data fetch 
+
 
 
 function App() {
   const [data, setData] = useState(null);
 
+  const [user, setUser] = useState(null);
+
   useEffect(() => {
     getPosts().then((posts) => setData(posts.results[0])); // Expecting results[0] to be an object
   }, []);
+
+  useEffect(()=>{
+    getData().then((user)=>console.log(user))
+  },[])
 
   return (
     <div>
@@ -24,6 +32,8 @@ function App() {
       ) : (
         <p>Loading...</p>
       )}
+
+
 
 
 {/* data ko props ke send kar ne ka second tarika step second  */}
