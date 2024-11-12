@@ -1,0 +1,9 @@
+.img-r{
+    width: 50%;
+}
+.item-container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* 3 cards per row */
+    gap: 16px; /* Space between the cards */
+  }
+  
