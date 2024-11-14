@@ -3,18 +3,32 @@ import React from 'react'
 const Card = () => {
   return (
     <div>
-      <div className="card" style={{ width: '18rem' }}>
-      <img src="" className="card-img-top" alt="..." />
-      <div className="card-body">
-        <h5 className="card-title">jaipur</h5>
-        <p className="card-text">
-          Some quick example text to build on the card title and make up the bulk of the card's content.
-        </p>
-        <a href="/" className="btn btn-primary">
-          Go somewhere
-        </a>
-      </div>
-    </div>
+      <div className="container">
+
+<table class="table">
+<thead className="table-dark">
+<tr>
+  <th scope="col">#</th>
+  <th scope="col">Weather</th>
+  <th scope="col">City</th>
+  <th scope="col">Country</th>
+  <th scope="col">Temp_c</th>
+  <th scope="col">wind_kph</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+  <th scope="row">1</th>
+  <td><img style={{width:"16%"}} alt="Weather condition icon"/></td>
+  <td>name</td>
+  <td>location</td>
+  <td>temp_.c</td>
+  <td>wind_kph</td>
+</tr>
+
+</tbody>
+</table>
+</div>
     </div>
   )
 }
